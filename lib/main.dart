@@ -29,7 +29,7 @@ class FirstHome extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           onPressed: () {
-            User user = User(name: 'Marfa', age: 32);
+            User user = User(name: 'Marfa', age: 33);
             Navigator.pushNamed(context, '/second', arguments: user);
           },
           child: Text('Ouuuu home'),
@@ -39,7 +39,13 @@ class FirstHome extends StatelessWidget {
   }
 }
 
-class SecondHome extends StatelessWidget {
+class SecondHome extends StatefulWidget {
+
+  @override
+  _SecondHome createState() => _SecondHome();
+}
+
+class _SecondHome extends State<SecondHome> {
   User user;
 
   @override
